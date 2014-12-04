@@ -11,7 +11,7 @@ if($@) {
 }
 else {print "ok 1\n"}
 
-if($Math::Complex_C::Q::VERSION eq '0.01') {
+if($Math::Complex_C::Q::VERSION eq '0.02') {
   print "ok 2\n";
 }
 else {
@@ -35,3 +35,5 @@ warn "\n   No support for pow, exp, sin, cos, tan, sinh, cosh, tanh\n   with thi
  if Math::Complex_C::Q::_mingw_w64_bug();
 
 
+warn "\n   Implementing workarounds for tan_cq and tanh_cq - see this module's docs.\n"
+ if Math::Complex_C::Q::_gcc_tan_bug();
